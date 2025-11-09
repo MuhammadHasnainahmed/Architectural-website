@@ -14,15 +14,27 @@ function Contactsection() {
           </p>
         </div>
 
-        {/* Buttons */}
-        <div className="flex flex-col md:flex-row gap-4">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300">
-            Contact Us
-          </button>
-          <button className="bg-white border border-orange-500 hover:bg-orange-500 hover:text-white text-orange-500 font-semibold px-6 py-3 rounded-full transition-all duration-300">
-            Our Projects
+       <div className="md:w-1/2 flex flex-col gap-4 w-full">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
+          />
+          <textarea
+            placeholder="Your Message"
+            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition resize-none h-32"
+          ></textarea>
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300">
+            Send Message
           </button>
         </div>
+
+
       </div>
     </section>
   );

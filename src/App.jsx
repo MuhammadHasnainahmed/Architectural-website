@@ -4,14 +4,18 @@ import Aboutsection from './Pages/Aboutsection'
 import Projectsection from './Pages/Projectsection'
 import Videosection from './Pages/Videosection'
 import Contactsection from './Pages/Contactsection'
+import ServicesSection from './Pages/ServicesSection'
+import TestimonialsSection from './Pages/TestimonialsSection'
 
 function App() {
   return (
     <>
       <Herosection />
+      <ServicesSection/>
       <Aboutsection/>
-      <Projectsection/>
       <Videosection/>
+      <Projectsection/>
+      <TestimonialsSection/>
       <Contactsection/>
     </>
   )

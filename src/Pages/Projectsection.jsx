@@ -43,11 +43,11 @@ function Projectsection() {
        
         <div className="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-8 cursor-pointer">
           {projects.map((project, index) => (
-            <div key={index} className="relative break-inside-avoid">
+            <div key={index} className="relative break-inside-avoid hover:scale-105 transition-all duration-300">
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-auto rounded-md shadow-md object-cover hover:scale-105 transition-all duration-300"
+                className="w-full h-auto rounded-md shadow-md object-cover hover:scale-105 transition-all duration-300 "
               />
            
               <div className="absolute flex justify-between items-center bottom-0 left-0 right-0 bg-white px-5 py-3 shadow-md">
