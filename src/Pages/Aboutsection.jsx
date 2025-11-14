@@ -6,7 +6,7 @@ function Aboutsection() {
    
       <div className="md:w-1/2">
         <img
-          src="/aboutimage.JPG" 
+          src="aboutimage.JPG" 
           alt="About Dingo Built"
           className="w-full h-auto object-cover rounded-xl shadow-lg"
         />

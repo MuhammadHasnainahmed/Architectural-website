@@ -3,10 +3,10 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Projectsection() {
   const projects = [
-    { img: "/buil4.JPG", title: "Modern Minimalist House", date: "May 2018" },
-    { img: "/buil1.JPG", title: "Xiami Office Building", date: "July 2018" },
-    { img: "/buil3.JPG", title: "Wooden House", date: "May 2018" },
-    { img: "/buil2.JPG", title: "Prototype Building", date: "January 2018" },
+    { img: "buil4.JPG", title: "Modern Minimalist House", date: "May 2018" },
+    { img: "buil1.JPG", title: "Xiami Office Building", date: "July 2018" },
+    { img: "buil3.JPG", title: "Wooden House", date: "May 2018" },
+    { img: "buil2.JPG", title: "Prototype Building", date: "January 2018" },
   ];
 
   return (

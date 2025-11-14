@@ -1,54 +1,75 @@
-import React, { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaNewspaper, FaBug } from "react-icons/fa";
-import Contactinput from "../Component/Contactinput";
+import React from "react";
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
-
-
+import Contactinput from "../Component/Contactinput";
 
 function ContactPage() {
-
-
   return (
     <section className="container mx-auto px-6 py-20">
-      <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Contact Us</h2>
-      <div className="flex flex-col md:flex-row gap-12">
-
-          <Contactinput />      
-
-        
-        <div className="md:w-1/2  grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="flex items-start gap-4">
-            <div className="bg-orange-100 p-3 rounded-md">
-              <FaPhoneAlt className="text-orange-600 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800">Phone</h4>
-              {/* <p className="text-gray-600 text-sm">support@example.com</p> */}
-              <p className="text-gray-600 text-sm">0457 209 649</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="bg-orange-100 p-3 rounded-md">
-              <IoLocationSharp  className="text-orange-600 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800">Location</h4>
-              {/* <p className="text-gray-600 text-sm">sales@example.com</p> */}
-              <p className="text-gray-600 text-sm"> Perth, Western Australia (We service all WA)</p>
-            </div>
-          </div>
+     
+      <div className="relative w-full h-40 mb-12 flex items-center justify-center rounded-lg overflow-hidden">
+        <img
+          src="/hero-background.JPG" 
+          alt="Contact Background"
+          className="absolute w-full h-full object-cover"
+        />
        
-          <div className="flex items-start gap-4">
-            <div className="bg-orange-100 p-3 rounded-md">
-              <FaBug className="text-orange-600 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800">Email</h4>
-              <p className="text-gray-600 text-sm">admin@dingobuilt.com</p>
-              {/* <p className="text-gray-600 text-sm">+1 234-567-89</p> */}
-            </div>
+        <div className="absolute w-full h-full bg-orange-300/40"></div>
+        <h2 className="relative text-3xl md:text-4xl font-bold text-white text-center">
+          Contact Us
+        </h2>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-12">
+     
+        <div className="md:w-1/2 bg-orange-600 text-white p-8 rounded-lg flex flex-col gap-6 shadow-lg">
+          <h3 className="text-2xl font-bold mb-6">Head Office</h3>
+
+          <div className="flex items-center gap-4">
+            <IoLocationSharp className="text-2xl text-white" />
+            <p>212 North Rodney Helena Montana 59601 Suite 107</p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <FaPhoneAlt className="text-2xl text-white" />
+            <p>
+              <a href="tel:4064316082" className="underline hover:text-orange-200">
+                406 431 6082
+              </a>
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <FaEnvelope className="text-2xl text-white" />
+            <p>
+              <a
+                href="mailto:beatriceherbalista@gmail.com"
+                className="underline hover:text-orange-200"
+              >
+                beatriceherbalista@gmail.com
+              </a>
+            </p>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-4 mt-6">
+            <a href="#" className="p-3 bg-white text-orange-600 rounded-full hover:bg-orange-200 transition">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="p-3 bg-white text-orange-600 rounded-full hover:bg-orange-200 transition">
+              <FaTwitter />
+            </a>
+            <a href="#" className="p-3 bg-white text-orange-600 rounded-full hover:bg-orange-200 transition">
+              <FaYoutube />
+            </a>
+            <a href="#" className="p-3 bg-white text-orange-600 rounded-full hover:bg-orange-200 transition">
+              <FaInstagram />
+            </a>
           </div>
         </div>
+
+        {/* Right Side: Contact Form */}
+        <Contactinput />
       </div>
     </section>
   );
