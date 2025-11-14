@@ -1,43 +1,31 @@
 import React from "react";
+import Contactinput from "../Component/Contactinput";
 
 function Contactsection() {
   return (
     <section id="contact" className="bg-gray-100 py-16">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 gap-6">
-        {/* Heading */}
-        <div className="text-center md:text-left">
-          <h1 className="text-orange-500 font-bold text-4xl md:text-5xl">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-4 gap-10">
+        
+     
+        <div className="md:w-1/2">
+          <h1 className="text-orange-500 font-bold text-4xl md:text-5xl mb-4">
             GET IN TOUCH
           </h1>
-          <p className="mt-4 text-gray-600 text-lg md:text-xl">
+          <p className="mt-2 text-gray-600 text-lg md:text-xl mb-6">
             We’d love to hear from you. Reach out for inquiries or project details.
           </p>
+
+        
+          <div className="text-gray-700 space-y-3">
+            <p><strong>Location:</strong> Perth, Western Australia (We service all WA)</p>
+            <p><strong>Phone:</strong> 0457 209 649</p>
+            <p><strong>Email:</strong> <a href="mailto:admin@dingobuilt.com" className="text-orange-500">admin@dingobuilt.com</a></p>
+          </div>
         </div>
 
-       <form className="md:w-1/2 flex flex-col gap-4 w-full">
-          <input
-            type="text"
-            placeholder="Your Name"
-            required
-            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            required
-            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
-          />
-          <textarea
-            placeholder="Your Message"
-            required
-            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition resize-none h-32"
-          ></textarea>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300">
-            Send Message
-          </button>
-        </form>
-
-
+         
+         <Contactinput/>
+        
       </div>
     </section>
   );

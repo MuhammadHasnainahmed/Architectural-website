@@ -3,42 +3,36 @@ import React from "react";
 function Aboutsection() {
   return (
     <section id="about" className="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10">
-      {/* Left Image */}
+   
       <div className="md:w-1/2">
         <img
-          src="/aboutimage.jpg"
-          alt="About Gothic Studio"
-          className="w-full h-auto object-cover "
+          src="/aboutimage.JPG" 
+          alt="About Dingo Built"
+          className="w-full h-auto object-cover rounded-xl shadow-lg"
         />
       </div>
 
-      {/* Right Content */}
+     
       <div className="md:w-1/2">
-        <h2 className="text-2xl md:text-3xl  font-extrabold text-gray-900 tracking-wide mb-6">
-            Dingo built
-            <hr  className=" w-[20%] mt-2 border-2 border-orange-500 "/>
+        <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide mb-6">
+          About <span className="text-orange-500">Dingo Built</span>
+          <hr className="w-[20%] mt-2 border-2 border-orange-500"/>
         </h2>
+
         <p className="text-gray-600 leading-relaxed mb-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
-          reiciendis veniam odio recusandae nam facilis quam sunt, unde
-          accusamus.
+          Dingo Built provides top-tier external façade solutions and interior fit-out services for commercial construction projects across Western Australia. 
         </p>
         <p className="text-gray-600 leading-relaxed mb-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil fuga
-          exercitationem aliquid porro, velit blanditiis nisi nostrum dolorem
-          modi iste voluptatibus sunt quisquam quis sapiente officia laboriosam.
-          Unde, consequatur ipsum.
+          With over 20 years of hands-on experience, our director Cade Aitken leads a highly skilled team to deliver exceptional craftsmanship, project management, and innovative design. 
         </p>
         <p className="text-gray-600 leading-relaxed mb-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eum
-          dolores, vero asperiores exercitationem aliquid quam numquam unde
-        
+          We specialize in façade systems, reclads, commercial interior fit-outs, and maintenance services — always ensuring quality, reliability, and client satisfaction.
         </p>
 
-        {/* Signature */}
+       
         <div>
-          <p className="font-signature text-lg mb-1">Dingo</p>
-          <p className="font-semibold tracking-wide text-gray-700">Dingo Built</p>
+          <p className="font-signature text-lg mb-1">Cade Aitken</p>
+          <p className="font-semibold tracking-wide text-gray-700">Director, Dingo Built</p>
         </div>
       </div>
     </section>
