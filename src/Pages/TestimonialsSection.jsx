@@ -8,7 +8,7 @@ function TestimonialsSection() {
       role: "CEO, ABC Corp",
       feedback:
         "DingoBuilt delivered our project on time with outstanding quality. Highly recommend their services!",
-      avatar: "/avator2.png", // apni images public folder me rakho
+      avatar: "/avator2.png", 
     },
     {
       name: "Sarah Khan",
