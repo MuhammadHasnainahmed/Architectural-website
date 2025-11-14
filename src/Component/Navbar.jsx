@@ -1,74 +1,81 @@
 import React, { useState } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); 
 
-  // Smooth scroll function
+  const navItems = [
+    { label: "Home", id: "home", path: "/" },
+    { label: "Services", id: "services", path: "/" },
+    { label: "About", id: "about", path: "/" },
+    { label: "Projects", id: "projects", path: "/" },
+    { label: "Testimonials", id: "testimonials", path: "/" },
+    { label: "Contact", id: "contact", path: "/contact" },
+  ];
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // Mobile menu close after scroll
+      setMenuOpen(false);
     }
   };
-
-  const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Services", id: "services" },
-    { label: "About", id: "about" },
-    { label: "Projects", id: "projects" },
-    { label: "Testimonial", id: "testimonials" },
-    { label: "Contact", id: "contact" },
-  ];
 
   return (
     <nav className="bg-white sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <img
             src="/dingobuiltlogo.jpg"
-            alt="logo"
-            className="h-16 w-auto rounded-md"
+            alt="DingoBuilt Logo"
+            className="h-20 w-auto rounded-md"
           />
         </div>
 
-        {/* Desktop Nav Links */}
-        <ul className="hidden md:flex gap-8 text-gray-700 font-semibold">
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex gap-10 text-gray-800 font-semibold">
           {navItems.map((item, index) => (
             <li
               key={index}
-              onClick={() => scrollToSection(item.id)}
               className="relative cursor-pointer hover:text-orange-500 transition-all duration-300
-                         after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300"
+              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300"
             >
-              {item.label}
+              {item.path === "/" && location.pathname === "/" ? (
+                <span onClick={() => scrollToSection(item.id)}>{item.label}</span>
+              ) : (
+                <Link to={item.path}>{item.label}</Link>
+              )}
             </li>
           ))}
         </ul>
 
-      
-
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
           <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {menuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white px-6 pb-4">
-          <ul className="flex flex-col gap-4 text-gray-700 font-semibold">
+        <div className="md:hidden bg-white px-6 pb-4 shadow-md">
+          <ul className="flex flex-col gap-4 text-gray-800 font-semibold">
             {navItems.map((item, index) => (
               <li
                 key={index}
-                onClick={() => scrollToSection(item.id)}
                 className="cursor-pointer hover:text-orange-500 transition-colors duration-300"
               >
-                {item.label}
+                {item.path === "/" && location.pathname === "/" ? (
+                  <span onClick={() => scrollToSection(item.id)}>{item.label}</span>
+                ) : (
+                  <Link to={item.path} onClick={() => setMenuOpen(false)}>
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -77,7 +84,7 @@ function Navbar() {
           <div className="relative mt-4">
             <input
               type="text"
-              placeholder="Where are you looking for?"
+              placeholder="Search..."
               className="bg-gray-100 rounded-full px-12 py-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
             />
             <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black" />
