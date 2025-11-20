@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import Contactinput from "../Component/Contactinput";
+import Majorclient from "../Component/Majorclient";
 
 function ContactPage() {
   
@@ -77,7 +78,10 @@ function ContactPage() {
 
         {/* Right Side: Contact Form */}
         <Contactinput />
+
+        {/*  */}
       </div>
+        <Majorclient/>
     </section>
   );
 }

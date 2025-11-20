@@ -13,10 +13,10 @@ function Servicepage() {
     });
   }, []);
   return (
-    <section className="min-h-screen bg-gray-50 py-20 px-6">
+    <section className="min-h-screen bg-gray-50 ">
       
   
-      <div className="relative w-full h-64 md:h-96 mb-12 flex items-center justify-center rounded-xl overflow-hidden">
+      <div className="relative w-full h-64 md:h-96 mb-12 flex items-center justify-center  overflow-hidden">
         <img
           src="/hero-background.JPG"
           alt="Services Background"

@@ -23,7 +23,7 @@ function CaseStudyAccordion() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto mt-20 p-8 bg-white rounded-3xl shadow-lg border">
+    <div className="max-w-6xl mx-auto my-20 p-8 bg-white rounded-3xl shadow-lg border">
       <h2 className="text-4xl font-bold mb-8">
         Case Study: <span className="text-orange-600">Department of Finance Building Reclad</span>
       </h2>
