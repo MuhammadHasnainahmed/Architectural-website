@@ -12,10 +12,10 @@ function Majorclient() {
 
   <ul className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
     {[
-      { name: "Suncorp Bank", logo: "/hero-background.JPG" },
-      { name: "Mazda", logo: "/logos/mazda.png" },
-      { name: "Dan Murphy’s", logo: "/logos/danmurphys.png" },
-      { name: "Kilmore Group", logo: "/logos/kilmore.png" },
+      { name: "Suncorp Bank", logo: "/SuncorpBank.png" },
+      { name: "Mazda", logo: "/Mazda.png" },
+      { name: "Dan Murphy’s", logo: "/DanMurphy.png" },
+      { name: "Kilmore Group", logo: "/kilmore.png" },
       { name: "Multiplex", logo: "/logos/multiplex.png" },
       { name: "Georgiou", logo: "/logos/georgiou.png" },
       { name: "Metronet", logo: "/logos/metronet.png" },
