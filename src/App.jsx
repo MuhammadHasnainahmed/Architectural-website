@@ -8,6 +8,7 @@ import Contactsection from "./Pages/Contactsection";
 import ServicesSection from "./Pages/ServicesSection";
 import TestimonialsSection from "./Pages/TestimonialsSection";
 import ContactPage from "./Pages/Contactpage";
+import Servicepage from "./Pages/Servicepage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
 
        
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/services" element={<Servicepage />} />
       </Routes>
    </main>
 

@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import Contactinput from "../Component/Contactinput";
 
 function ContactPage() {
+  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
   return (
     <section className="container mx-auto px-6 py-20">
      
