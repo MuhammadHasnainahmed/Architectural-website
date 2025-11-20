@@ -27,11 +27,13 @@ function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Logo */}
         <div className="flex items-center gap-4">
+          <Link to="/">
           <img
             src="/dingobuiltlogo.jpg"
             alt="DingoBuilt Logo"
             className="h-20 w-auto rounded-md"
-          />
+            />
+            </Link>
         </div>
 
         {/* Desktop Navigation */}
