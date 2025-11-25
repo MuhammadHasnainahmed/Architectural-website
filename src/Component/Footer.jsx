@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="bg-orange-600 w-full  text-white py-12">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-       
         <div className="flex flex-col items-center md:items-start">
-          <img
-            src="/dingobuiltlogo.jpg"
-            alt="DingoBuilt Logo"
-            className="h-24 w-auto mb-4 rounded-md"
-          />
+          <Link to="/">
+            <img
+              src="./footerLogo.png"
+              alt="DingoBuilt Logo"
+              className="w-[200px] h-[200px] mb-4 rounded-md"
+            />
+          </Link>
 
-          <h2 className="text-2xl font-bold text-black">DingoBuilt</h2>
+          {/* <h2 className="text-2xl font-bold text-black">DingoBuilt</h2> */}
         </div>
 
-     
         <div className="text-center md:text-left">
           <h1 className="text-xl font-semibold text-black mb-3">About Us</h1>
           <p className="text-white leading-relaxed">
@@ -26,7 +27,6 @@ function Footer() {
           </p>
         </div>
 
-     
         <div className="text-center md:text-left">
           <h1 className="text-xl font-semibold text-black mb-3">Contact Us</h1>
 
