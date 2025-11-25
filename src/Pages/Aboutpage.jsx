@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import Majorclient from "../Component/Majorclient";
+import { useEffect } from "react";
+import WhyChooseUs from "../Component/WhyChooseUs";
 
 function Aboutpage() {
- 
-    useEffect(() => {
-       window.scrollTo({
-        top:0,
-        behavior:"smooth"
-       })
-    }, []);
-    
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }, []);
+
 
   return (
     <div className="">
-   
+
       <section className="relative bg-black text-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -30,7 +30,7 @@ function Aboutpage() {
 
       </section>
 
-     
+
       <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Who We Are</h2>
@@ -53,50 +53,11 @@ function Aboutpage() {
         />
       </section>
 
-  
-      <section className="bg-gray-100 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Why Choose Us
-          </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2 text-orange-600">
-                20+ Years Experience
-              </h3>
-              <p className="text-gray-600">
-                We bring decades of skilled construction expertise to every
-                project.
-              </p>
-            </div>
+      <WhyChooseUs />
 
-            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2 text-orange-600">
-                Fully Certified Team
-              </h3>
-              <p className="text-gray-600">
-                Our team follows strict safety and quality guidelines.
-              </p>
-            </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2 text-orange-600">
-                Zero Disruption
-              </h3>
-              <p className="text-gray-600">
-                We work safely inside active environments like hospitals and
-                corporate buildings.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-     
-      <div className="my-20">
-        <Majorclient />
-      </div>
     </div>
   );
 }
