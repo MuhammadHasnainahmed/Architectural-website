@@ -1,5 +1,3 @@
-import { Link } from "lucide-react";
-
 const images = [
   "/built (1).JPG",
   "/built (2).JPG",
@@ -54,13 +52,12 @@ const Gallery = ({ startIndex, limit, isSection }) => {
           />
         ))}
       </div>
-      <Link to="/gallery">
+      
       {isSection && (
         <button className="w-[200px] mt-12 mx-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300">
           See more
         </button>
       )}
-      </Link>
     </div>
   );
 };
