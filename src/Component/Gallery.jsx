@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 const images = [
   "/built (1).JPG",
   "/built (2).JPG",
@@ -34,6 +37,15 @@ const images = [
 ];
 
 const Gallery = ({ startIndex, limit, isSection }) => {
+
+
+   useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }, []);
+
   const visibleImages = limit ? images.slice(startIndex, limit) : images;
 
   return (
@@ -55,7 +67,9 @@ const Gallery = ({ startIndex, limit, isSection }) => {
       
       {isSection && (
         <button className="w-[200px] mt-12 mx-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300">
+          <Link to="/gallery">
           See more
+          </Link>
         </button>
       )}
     </div>

@@ -22,7 +22,7 @@ function App() {
               <Herosection />
               <ServicesSection />
               <Aboutsection />
-              <Videosection />0
+              <Videosection />
               <WhyChooseUs />
               <Gallery startIndex={0} limit={6} isSection={true}/>
             </>
