@@ -31,22 +31,22 @@ function Footer() {
           <h1 className="text-xl font-semibold text-black mb-3">Contact Us</h1>
 
           <p className="text-white">
-            <strong>Location:</strong> Perth, Western Australia (We service all
+            <strong>Location: </strong> Perth, Western Australia (We service all
             WA)
           </p>
 
           <p className="text-white">
-            <strong>Phone:</strong>
+            <strong>Phone: </strong>
             <a
               href="tel:0457209649"
               className="hover:text-black transition-colors"
             >
-              0457 209 649
+             +61 0457 209 649
             </a>
           </p>
 
           <p className="text-white">
-            <strong>Email:</strong>
+            <strong>Email: </strong>
             <a
               href="mailto:admin@dingobuilt.com"
               className="hover:text-black transition-colors"

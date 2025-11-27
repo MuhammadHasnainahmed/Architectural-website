@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import Contactinput from "../Component/Contactinput";
-import Majorclient from "../Component/Majorclient";
 
 function ContactPage() {
   const address = "Perth, WA, Western Australia";
@@ -12,84 +14,86 @@ function ContactPage() {
   )}&output=embed`;
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
     <section className="container mx-auto px-6 py-20">
 
-      {/* Hero Section */}
-      <div className="relative w-full h-40 mb-12 flex items-center justify-center rounded-lg overflow-hidden">
+      {/* 🔥 HERO SECTION */}
+      <div className="relative w-full h-52 md:h-64 flex items-center justify-center rounded-2xl overflow-hidden shadow-xl">
         <img
           src="/hero-background.JPG"
           alt="Contact Background"
-          className="absolute w-full h-full object-cover"
+          className="absolute w-full h-full object-cover scale-105"
         />
-        <div className="absolute w-full h-full bg-orange-300/40"></div>
-        <h2 className="relative text-3xl md:text-4xl font-bold text-white text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/60 to-black/50"></div>
+        <h2 className="relative text-4xl md:text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
           Contact Us
         </h2>
       </div>
 
-      {/* Map */}
-      <div className="my-12 w-full h-[350px] rounded-xl overflow-hidden shadow-lg mt-8">
+      {/* 🔥 MAP */}
+      <div className="my-16 w-full h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-orange-300/40">
         <iframe
           src={mapUrl}
-          className="w-full h-full border-0"
-          allowFullScreen=""
+          className="w-full h-full"
           loading="lazy"
         ></iframe>
       </div>
 
-      {/* Contact Info + Form */}
-      <div className="flex flex-col md:flex-row gap-12">
+      {/* 🔥 MAIN CONTENT (Info + Form) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-        {/* Left: Contact Information */}
-        <div className="md:w-1/2 bg-orange-600 text-white p-8 rounded-lg flex flex-col gap-6 shadow-lg">
-          <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+        {/* LEFT — CONTACT INFO */}
+        <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300">
+          <h3 className="text-3xl font-bold text-orange-600 mb-8">
+            Contact Information
+          </h3>
 
-          <div className="flex items-center gap-4">
-            <IoLocationSharp className="text-2xl text-white" />
-            <p>Perth, WA, Western Australia</p>
+          <div className="space-y-6">
+
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                <IoLocationSharp className="text-white text-2xl" />
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Perth, WA, Western Australia
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                <FaPhoneAlt className="text-white text-2xl" />
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <a href="tel:+61457209649" className="font-semibold hover:text-orange-600">
+                  +61 0457 209 649
+                </a>
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                <FaEnvelope className="text-white text-2xl" />
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <a
+                  href="mailto:admin@dingobuilt.com"
+                  className="font-semibold hover:text-orange-600"
+                >
+                  admin@dingobuilt.com
+                </a>
+              </p>
+            </div>
+
           </div>
-
-          <div className="flex items-center gap-4">
-            <FaPhoneAlt className="text-2xl text-white" />
-            <p>
-              <a href="tel:+61457209649" className="underline hover:text-orange-200">
-                0457 209 649
-              </a>
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <FaPhoneAlt className="text-2xl text-white" />
-            <p>
-              <a href="tel:+614366234876" className="underline hover:text-orange-200">
-                43 662 348 763
-              </a>
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <FaEnvelope className="text-2xl text-white" />
-            <p>
-              <a
-                href="mailto:admin@dingobuilt.com"
-                className="underline hover:text-orange-200"
-              >
-                admin@dingobuilt.com
-              </a>
-            </p>
-          </div>
-
         </div>
 
-        {/* Right: Contact Form */}
-        <Contactinput />
+        {/* RIGHT — CONTACT FORM */}
+        <div className="rounded-2xl shadow-xl p-6 md:p-10 bg-orange-600 text-white">
+          <Contactinput />
+        </div>
 
       </div>
     </section>

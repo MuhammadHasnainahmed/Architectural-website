@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import CaseStudyAccordion from "../Component/CaseStudyAccordion";
 import Servicedetails from "../Component/Servicedetails";
 import Industries from "../Component/Industries";
-import Majorclient from "../Component/Majorclient";
+import ExternalFacade from "../Component/ExternalFacade";
+import CommercialFitouts from "../Component/CommercialFitouts";
+import ProjectManagement from "../Component/ProjectManagement";
 
 function Servicepage() {
 
@@ -15,6 +17,7 @@ function Servicepage() {
   return (
     <section className="min-h-screen bg-gray-50 ">
 
+     
 
       <div className="relative w-full h-64 md:h-96 mb-12 flex items-center justify-center  overflow-hidden">
         <img
@@ -33,8 +36,15 @@ function Servicepage() {
         </div>
       </div>
 
+       <ExternalFacade />
+      <CommercialFitouts />
+      <ProjectManagement />
 
-      <Servicedetails />
+
+
+
+
+      
 
 
       <div className="max-w-6xl mx-auto mt-24 p-10 rounded-3xl bg-linear-to-r from-orange-50 to-white shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">

@@ -6,29 +6,37 @@ function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-b from-gray-900 to-black text-white"
+      className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white"
     >
-      <div className="text-center mb-12 px-4">
-        <h1 className="text-4xl font-bold mb-4">
+      {/* SECTION HEADER */}
+      <div className="text-center mb-16 px-6">
+        <h1 className="text-5xl font-extrabold mb-4 tracking-tight">
           Our <span className="text-orange-500">Services</span>
         </h1>
-        <hr className="w-16 mx-auto border-2 border-orange-500 mb-6" />
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          We deliver professional construction, façade and interior fit-out
-          solutions with precision, quality and innovation.
+
+        <div className="flex justify-center">
+          <div className="h-1 w-24 bg-orange-500 rounded-full mb-6"></div>
+        </div>
+
+        <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+          Delivering premium façade systems, commercial fit-outs and expert
+          construction management across Western Australia.
         </p>
       </div>
 
-  
-      <Servicedetails />
-
-      <Link to="/services">
-      <div className="text-center mt-10">
-        <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 transition rounded-lg font-semibold">
-          View More Details
-        </button>
+      {/* CARD WRAPPER WITH NICE SPACING */}
+      <div className="max-w-7xl mx-auto">
+        <Servicedetails />
       </div>
-      </Link>
+
+      {/* VIEW MORE BUTTON */}
+      <div className="text-center mt-16">
+        <Link to="/services">
+          <button className="px-10 py-4 bg-orange-600 hover:bg-orange-700 transition-all rounded-xl font-semibold text-lg shadow-lg shadow-orange-600/20 hover:shadow-orange-600/40">
+            View More Details
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }
