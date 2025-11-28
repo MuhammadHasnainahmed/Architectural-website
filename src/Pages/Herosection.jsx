@@ -12,7 +12,7 @@ function Herosection() {
       <section id="home">
         <div
           className="relative w-full h-[90vh] bg-fixed bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-background.JPG')" }}
+          style={{ backgroundImage: "url('/Banner.HEIC')" }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
 
