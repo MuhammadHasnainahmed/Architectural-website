@@ -2,7 +2,7 @@ import React from 'react'
 
 function Industries() {
   return (
-       <div className="my-12max-w-6xl mx-auto mt-24 px-4">
+       <div className="my-12 max-w-6xl mx-auto mt-24 px-4">
   <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
     Industries We Serve
   </h2>
