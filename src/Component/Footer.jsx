@@ -20,7 +20,7 @@ function Footer() {
         <div className="text-center md:text-left">
           <h1 className="text-xl font-semibold text-black mb-3">About Us</h1>
           <p className="text-white leading-relaxed">
-            DingoBuilt provides top-tier external facade solutions, commercial
+            Dingo Built provides top-tier external facade solutions, commercial
             interior fit-outs, and renovation services across Western Australia.
             We focus on quality, precision, and delivering projects that exceed
             expectations.
@@ -41,7 +41,7 @@ function Footer() {
               href="tel:0457209649"
               className="hover:text-black transition-colors"
             >
-             +61 0457 209 649
+             +61 457 209 649
             </a>
           </p>
 

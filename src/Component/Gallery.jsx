@@ -2,24 +2,19 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const images = [
-  "/Home Page.jpg",
-  "/Home Page1.jpeg",
-  "/Home Page2.jpg",
-  "/Home Page3.HEIC",
-  "/Home page4.jpg",
-  "/Home Page5.jpg",
   "/Gallery (1).jpeg",
-  "/Gallery (1).JPG",
   "/Gallery (2).jpeg",
-  "/Gallery (2).JPG",
-  "/Gallery (3).jpeg",
+  "/Gallery (1).JPG",
+  "/Home Page1.jpeg",
   "/Gallery (3).JPG",
+  "/Home Page5.jpg",
+  "/Gallery (3).jpeg",
   "/Gallery (4).jpeg",
-  "/Gallery (4).JPG",
   "/Gallery (5).jpeg",
+  "/Gallery (4).JPG",
   "/Gallery (5).JPG",
-  "/Gallery (6).jpeg",
   "/Gallery (6).JPG",
+  "/Gallery (6).jpeg",
   "/Gallery (7).JPG",
   "/Gallery (8).JPG",
   "/Gallery (9).JPG",
@@ -28,7 +23,15 @@ const images = [
   "/Gallery (12).JPG",
   "/Gallery (13).JPG",
   "/Gallery (14).JPG",
- ];
+  "/Galler.HEIC",
+
+
+  "/Home Page.jpg",
+  "/Home Page3.HEIC",
+  "/Home page4.jpg",
+  "/Gallery (2).JPG",
+  "/Home Page2.jpg",
+];
 
 const Gallery = ({ startIndex, limit, isSection }) => {
 
@@ -45,9 +48,11 @@ const Gallery = ({ startIndex, limit, isSection }) => {
 
   return (
     <div className="container mx-auto px-6 py-10 flex flex-col justify-center">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Our <span className="text-orange-500">Gallery</span>
-      </h2>
+      {isSection &&
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Our <span className="text-orange-500">Gallery</span>
+        </h2>
+      }
 
       {/* Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

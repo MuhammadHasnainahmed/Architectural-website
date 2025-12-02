@@ -1,102 +1,132 @@
+import { User } from "lucide-react";
 import React, { useEffect } from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
-import Contactinput from "../Component/Contactinput";
 
 function ContactPage() {
-  const address = "Perth, WA, Western Australia";
-
-  const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(
-    address
-  )}&output=embed`;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
-    <section className="container mx-auto px-6 py-20">
 
-      {/* 🔥 HERO SECTION */}
-      <div className="relative w-full h-52 md:h-64 flex items-center justify-center rounded-2xl overflow-hidden shadow-xl">
-        <img
-          src="/hero-background.JPG"
-          alt="Contact Background"
-          className="absolute w-full h-full object-cover scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/60 to-black/50"></div>
-        <h2 className="relative text-4xl md:text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
-          Contact Us
-        </h2>
-      </div>
+    <>
+      <section style={{ backgroundImage: "url(/contact-banner.jpg)" }}
+        className="flex justify-center items-center relative bg-black text-white py-24 bg-center bg-cover">
+        <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* 🔥 MAP */}
-      <div className="my-16 w-full h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-orange-300/40">
-        <iframe
-          src={mapUrl}
-          className="w-full h-full"
-          loading="lazy"
-        ></iframe>
-      </div>
+        <div className="relative z-50 ">
+          <h1 className=" text-4xl md:text-6xl font-bold mb-4">
+            Contact <span className="text-orange-500">Us</span>
+          </h1>
+        </div>
 
-      {/* 🔥 MAIN CONTENT (Info + Form) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-        {/* LEFT — CONTACT INFO */}
-        <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300">
-          <h3 className="text-3xl font-bold text-orange-600 mb-8">
-            Contact Information
-          </h3>
+      </section><section className="container mx-auto px-6 py-20">
 
-          <div className="space-y-6">
+        {/* 🔥 HERO SECTION */}
 
-            <div className="flex items-start gap-4">
-              <div className="bg-orange-600 p-3 rounded-lg shadow-md">
-                <IoLocationSharp className="text-white text-2xl" />
+
+        <h3 className="text-center  mt-12 text-3xl font-bold text-orange-600 mb-8">
+          Contact Information
+        </h3>
+
+        {/* 🔥 MAIN CONTENT (Info + Form) */}
+        <div className="mt-12 flex flex-col md:flex-row gap-12 justify-center items-centergap-12">
+
+          {/* LEFT — CONTACT INFO */}
+          <div className="w-[600px]  bg-white rounded-2xl p-10 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300">
+
+
+            <div className="space-y-6">
+
+              <div className="flex items-center gap-4">
+                <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                  <User className="text-white text-2xl" />
+                </div>
+                <p className="text-lg space-x-2 text-gray-700 leading-relaxed">
+                  Code Aitken
+                  <span className="ml-2 font-semibold">(Director)</span>
+                </p>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Perth, WA, Western Australia
-              </p>
-            </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-orange-600 p-3 rounded-lg shadow-md">
-                <FaPhoneAlt className="text-white text-2xl" />
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                  <FaPhoneAlt className="text-white text-2xl" />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <a href="tel:+61457209649" className="font-semibold hover:text-orange-600">
+                    +61 457 209 649
+                  </a>
+                </p>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                <a href="tel:+61457209649" className="font-semibold hover:text-orange-600">
-                  +61 0457 209 649
-                </a>
-              </p>
-            </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-orange-600 p-3 rounded-lg shadow-md">
-                <FaEnvelope className="text-white text-2xl" />
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                  <FaEnvelope className="text-white text-2xl" />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <a
+                    href="mailto:admin@dingobuilt.com"
+                    className="font-semibold hover:text-orange-600"
+                  >
+                    cade@dingobuilt.com
+                  </a>
+                </p>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                <a
-                  href="mailto:admin@dingobuilt.com"
-                  className="font-semibold hover:text-orange-600"
-                >
-                  admin@dingobuilt.com
-                </a>
-              </p>
-            </div>
 
+            </div>
           </div>
-        </div>
 
-        {/* RIGHT — CONTACT FORM */}
-        <div className="rounded-2xl shadow-xl p-6 md:p-10 bg-orange-600 text-white">
-          <Contactinput />
-        </div>
+          <div className="w-[600px] bg-white rounded-2xl p-10 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300">
 
-      </div>
-    </section>
+            <div className="space-y-6">
+
+              <div className="flex items-center gap-4">
+                <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                  <User className="text-white text-2xl" />
+                </div>
+                <p className="text-lg space-x-2 text-gray-700 leading-relaxed">
+                  Elyse Aitken
+                  <span className="ml-2 font-semibold">(Business Manager)</span>
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                  <FaPhoneAlt className="text-white text-2xl" />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <a href="tel:+61467591142" className="font-semibold hover:text-orange-600">
+                    +61 467 591 142
+                  </a>
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-600 p-3 rounded-lg shadow-md">
+                  <FaEnvelope className="text-white text-2xl" />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <a
+                    href="mailto:admin@dingobuilt.com"
+                    className="font-semibold hover:text-orange-600"
+                  >
+                    admin@dingobuilt.com
+                  </a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </section></>
   );
 }
 

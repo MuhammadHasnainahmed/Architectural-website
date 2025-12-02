@@ -17,7 +17,7 @@ function CommercialFitouts() {
         {/* LEFT IMAGE */}
         <div>
           <img
-            src="/built (11).JPG"
+            src="/built (33).jpeg"
             alt="Interior Fitouts"
             className="rounded-2xl shadow-xl w-full object-cover"
           />

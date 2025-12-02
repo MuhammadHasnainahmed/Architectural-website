@@ -24,7 +24,7 @@ function App() {
               <Aboutsection />
               <Videosection />
               <WhyChooseUs />
-              <Gallery startIndex={0} limit={6} isSection={true}/>
+              <Gallery startIndex={22} limit={28} isSection={true}/>
             </>
           }
         />

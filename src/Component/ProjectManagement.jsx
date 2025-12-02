@@ -49,7 +49,7 @@ function ProjectManagement() {
         {/* RIGHT IMAGE */}
         <div>
           <img
-            src="/built (10).JPG"
+            src="/built (34).jpeg"
             alt="Project Management"
             className="rounded-2xl shadow-xl w-full object-cover"
           />
