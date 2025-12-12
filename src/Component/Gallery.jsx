@@ -17,20 +17,19 @@ const images = [
   "/Gallery (6).jpeg",
   "/Gallery (7).JPG",
   "/Gallery (8).JPG",
-  "/Gallery (9).JPG",
-  "/Gallery (10).JPG",
   "/Gallery (11).JPG",
+  "/Gallery (10).JPG",
+  "/Gallery (9).JPG",
   "/Gallery (12).JPG",
   "/Gallery (13).JPG",
   "/Gallery (14).JPG",
   "/Galler.HEIC",
-
-
   "/Home Page.jpg",
   "/Home Page3.HEIC",
   "/Home page4.jpg",
   "/Gallery (2).JPG",
   "/Home Page2.jpg",
+  "/Galler.HEIC",
 ];
 
 const Gallery = ({ startIndex, limit, isSection }) => {

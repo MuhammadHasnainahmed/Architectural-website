@@ -52,8 +52,7 @@ function Aboutpage() {
       </section>
 
 
-      <WhyChooseUs />
-
+ 
 
 
     </div>

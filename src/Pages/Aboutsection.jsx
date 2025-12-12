@@ -27,7 +27,7 @@ function Aboutsection() {
           With over 20 years of hands-on experience, our director Cade Aitken leads a highly skilled team to deliver exceptional craftsmanship, project management, and innovative design.
         </p>
         <p className="text-gray-600 leading-relaxed mb-8">
-          We specialize in façade systems, reclads, commercial interior fit-outs, and maintenance services — always ensuring quality, reliability, and client satisfaction.
+          We specialise in façade systems, reclads, commercial interior fit-outs, and maintenance services — always ensuring quality, reliability, and client satisfaction.
         </p>
 
 
